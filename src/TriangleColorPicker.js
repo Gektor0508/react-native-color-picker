@@ -186,7 +186,7 @@ export class TriangleColorPicker extends React.PureComponent {
     return { h, s: normalized.s, v: normalized.v }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const handleColorChange = ({ x, y }) => {
       if (this._changingHColor) {
         this._handleHColorChange({ x, y })

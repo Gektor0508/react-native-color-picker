@@ -104,7 +104,7 @@ export class HoloColorPicker extends React.PureComponent {
     return tinycolor(this._getColor()).toHexString()
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const handleColorChange = ({ x, y }) => {
       const { s, v } = this._getColor()
       const marginLeft = (this._layout.width - this.state.pickerSize) / 2
